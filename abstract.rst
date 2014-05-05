@@ -1,9 +1,9 @@
 Fast Serialization of Numpy Arrays with Bloscpack
 -------------------------------------------------
 
-Bloscpack is a reference implementation and file-format for fast serialization
+Bloscpack [1] is a reference implementation and file-format for fast serialization
 of numerical data. It features lightweight, chunked and compressed storage,
-based on the extremely fast Blosc metacodec and supports serialization of
+based on the extremely fast Blosc [2] metacodec and supports serialization of
 Numpy arrays out-of-the-box. Recently, Blosc -- being the metacodec that it is
 -- has received support for using the popular and widely used Snappy, LZ4, and
 ZLib codecs, and so, now Bloscpack supports serializing Numpy arrays
@@ -20,3 +20,6 @@ Lastly I will argue that compressed and chunked storage format such as
 Bloscpack can be and already is a useful substrate on which to build more
 powerful applications such as online analytical processing engines and
 distributed computing frameworks.
+
+[1]: https://github.com/Blosc/bloscpack
+[2]: https://github.com/Blosc/c-blosc/
