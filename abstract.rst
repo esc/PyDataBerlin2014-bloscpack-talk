@@ -17,8 +17,8 @@ performance and usability wise, to alternatives such as Numpy's native offerings
 solutions.
 
 Lastly I will argue that compressed and chunked storage format such as
-Bloscpack can be and already is a useful substrate on which to build more
-powerful applications such as online analytical processing engines and
+Bloscpack can be and somewhat already is a useful substrate on which to build
+more powerful applications such as online analytical processing engines and
 distributed computing frameworks.
 
 [1]: https://github.com/Blosc/bloscpack
