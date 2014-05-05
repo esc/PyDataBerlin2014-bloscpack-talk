@@ -12,8 +12,8 @@ easily with those codecs!
 In this talk I will present recent benchmarks of Bloscpack performance on a
 variety of artificial and real-world datasets with a special focus on the newly
 available codecs. In these benchmarks I will compare Bloscpack, both
-performance and usability wise to alternatives such as Numpy's native offerings
-(NPZ and NPY), HDF5/PyTables [6], and if time permits, to novel, bleeding edge
+performance and usability wise, to alternatives such as Numpy's native offerings
+(NPZ and NPY), HDF5/PyTables [6], and if time permits, to novel bleeding edge
 solutions.
 
 Lastly I will argue that compressed and chunked storage format such as
