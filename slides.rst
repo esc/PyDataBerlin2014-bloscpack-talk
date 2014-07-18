@@ -158,6 +158,9 @@ Extension Example
 * Implement CompressedS3Sink and CompressedS3Source
 * (These know nothing about Numpy)
 
+Somthing along the lines of...
+------------------------------
+
 .. code-block:: python
 
    source = bp.PlainNumpySource(a)
@@ -169,8 +172,6 @@ Extension Example
            nchunks, chunk_size, last_chunk_size,
            metadata=source.metadata)
 
-* Alternatively with a ``PlainFileSource`` --> compress binary files on disk
-  and send to S3
 
 Rest
 ----
