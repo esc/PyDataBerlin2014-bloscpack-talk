@@ -59,8 +59,8 @@ API
 * Sources and Sinks can be generators
 * Abstract classes with some convenience provided
 
-API
----
+``pack`` and ``unpack``
+-----------------------
 
 .. code-block:: python
 
