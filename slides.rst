@@ -37,6 +37,13 @@ Features
 * Checksums
 * Offsets, including pre-allocation for append
 
+Use Cases
+---------
+
+* Fast serialization
+* Streaming
+
+
 API
 ---
 
