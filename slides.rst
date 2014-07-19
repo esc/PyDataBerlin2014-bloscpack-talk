@@ -58,6 +58,8 @@ Features
 * Checksums
 * Offsets, including pre-allocation for append
 
+.. image:: bloscpack.pdf
+
 Use Cases
 ---------
 
@@ -208,6 +210,8 @@ Background
 * Builds on benchmarks presented at EuroScipy 2013
 * Those used a laptop with SSD and SD storage
 * Showed that Bloscpack can be outperform contenders
+
+See also: `Bloscpack: a compressed lightweight serialization format for numerical data <http://arxiv.org/abs/1404.6383>`_
 
 Experimental Setup
 ------------------
