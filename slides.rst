@@ -231,22 +231,22 @@ Contenders
 
 * NPY
 
-  * Numpy built-in plain serialization
+  * Numpy plain serialization
 
 * NPZ
 
-  * Numpy built-in compressed (using zip) serialization
+  * Numpy compressed (using zip) serialization
 
 * ZFile
 
-  * Joblib's built-in compressed (using zlib) **pickler** extension
+  * Joblib's compressed (using zlib) **pickler** extension
 
 NPY Flaw
 --------
 
 * Prior to serialization, array is copied in memory with ``tostring()``
 * Fixed by Olivier Grisel to use ``nditer`` (`#4077 <https://github.com/numpy/numpy/pull/4077>`_)
-* Available in ``1.9.0b1``
+* Available in  ``v1.9.0b1``, which is what I used for the benchmarks
 
 NPZ Flaw
 --------
@@ -293,9 +293,9 @@ Relationship to (Distributed) Analytics Engines
   * BLZ / bcolz
   * Parquet
 
-* Fast, partial loading (from disk or network)
-* Reduced disk size
-* But: need to chose the right codec
+* Fast, partial loading from disk or network
+* Reduced storage requirements
+* But: need to chose the *right codec™*
 * A Bloscpack file could translate directly to a serialized column
 
 TODO
