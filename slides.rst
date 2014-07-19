@@ -43,7 +43,6 @@ Use Cases
 * Fast serialization
 * Streaming
 
-
 API
 ---
 
@@ -179,15 +178,132 @@ Somthing along the lines of...
            nchunks, chunk_size, last_chunk_size,
            metadata=source.metadata)
 
+Benchmarks
+==========
 
-Rest
+Background
+----------
+
+* Builds on benchmarks presented at EuroScipy 2013
+* Those used a laptop with SSD and SD storage
+* Showed that Bloscpack can be outperform contenders
+
+Experimental Setup
+------------------
+
+* Use Python 3.4
+* Use some real-world datasets
+* Benchmark new codecs available in Blosc
+* Add PyTables to the mix
+* Run it in the AWS cloud
+
+Datasets
+--------
+
+* **arange**
+
+  * Integers
+
+* **linspace**
+
+  * floats
+
+* **poisson**
+
+  * more or less random numbers
+
+* **neuronal**
+
+  * Neural net spike time stamps
+  * Kindly provided by Yuri Zaytsev
+
+* **bitcoin**
+
+  * Historical MtGOX trade data
+
+Contenders
+----------
+
+* PyTables
+
+  * HDF5 interface
+  * Supports Blosc and others
+
+* NPY
+
+  * Numpy built-in plain serialization
+
+* NPZ
+
+  * Numpy built-in compressed (using zip) serialization
+
+* ZFile
+
+  * Joblib's built-in compressed (using zlib) **pickler** extension
+
+NPY Flaw
+--------
+
+* Prior to serialization, array is copied in memory with ``tostring()``
+* Fixed by Olivier Grisel to use ``nditer`` (`#4077 <https://github.com/numpy/numpy/pull/4077>`_)
+* Available in ``1.9.0b1``
+
+NPZ Flaw
+--------
+
+* Create a temporary plain version (``/tmp``)
+* Compresses into a Zip archive from there
+* Due to issues with the ZipFile module
+
+ZFile Flaw
+----------
+
+* Does not support arrays larger than 2GB
+* An ``int32`` is used somewhere for the size
+
+Remaining Experimental Parameters
+---------------------------------
+
+* Instance
+
+  * c3.2xlarge
+  * CPUs: 8
+  * RAM: 15GB
+
+* Dataset Sizes
+
+  * 1MB
+  * 10MB
+  * 100MB
+
+* Storage
+
+  * EBS
+  * Ephemeral
+
+Dataset available
+-----------------
+
+Relationship to (Distributed) Analytics Engines
+-----------------------------------------------
+
+* Colum-oriented, compressed, chunked storage
+
+  * Hustle
+  * BLZ / bcolz
+  * Parquet
+
+* Fast, partial loading (from disk or network)
+* Reduced disk size
+* But: need to chose the right codec
+* A Bloscpack file could translate directly to a serialized column
+
+TODO
 ----
 
+* Support Bloscpack in Joblib
 
-Streaming
+  * Speed gain
+  * Mitigate 2GB issue
 
-S3CompressedSink / S3CompressedSource
-
-Results
-
-Joblib integration
+* Release Python 3 support
