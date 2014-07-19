@@ -289,9 +289,10 @@ Relationship to (Distributed) Analytics Engines
 
 * Colum-oriented, compressed, chunked storage
 
-  * Hustle
-  * BLZ / bcolz
-  * Parquet
+  * `bcolz <https://github.com/Blosc/bcolz>`_
+  * `Hustle <https://github.com/chango/hustle>`_
+  * `Parquet <http://parquet.io/>`_
+  * `RCFile / ORCFile <https://code.facebook.com/posts/229861827208629/scaling-the-facebook-data-warehouse-to-300-pb/?_fb_noscript=1>`_
 
 * Fast, partial loading from disk or network
 * Reduced storage requirements
