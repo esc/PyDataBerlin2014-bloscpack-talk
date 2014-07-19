@@ -5,13 +5,34 @@ Fast Serialization of Numpy Arrays with Bloscpack
 Blosc
 =====
 
-Blosc: a fast meta-codec
+Blosc: A Fast Meta-Codec
 ------------------------
 
 * Blocking
 * Shuffling
 * Multithreaded
 * Multi-codec
+
+.. image:: blosc.pdf
+
+Shuffle Filter
+--------------
+
+* Reorder bytes by significance inside a block
+* Potentially reduce Lempel-Ziv complexity of the data
+
+.. image:: shuffle.pdf
+
+Multi-Codec
+-----------
+
+* By default it uses **Blosclz** -- derived from **Fastlz**
+
+* Alternative codecs
+
+  * **LZ4 / LZ4HC**
+  * **Snappy**
+  * **Zlib**
 
 python-blosc: bindings
 ----------------------
