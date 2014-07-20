@@ -174,7 +174,7 @@ Numpy Example
    bp.pack_ndarray_file(a, 'a.blp')
 
    # use custom settings
-   bp.pack_ndarray_file(a,
+   bp.pack_ndarray_file(a, 'a.blp',
        chunk_size='20M',
        blosc_args=bp.BloscArgs(cname='lz4', clevel=9),
        bloscpack_args=bp.BloscpackArgs(offsets=False),
