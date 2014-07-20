@@ -306,10 +306,61 @@ Remaining Experimental Parameters
   * EBS
   * Ephemeral
 
+
 Dataset available
 -----------------
 
 pass
+
+Aggregated Results
+------------------
+
+* Single plots can supply insights
+* Need to aggregate for a big picture
+* Award points to a codec/level combination
+
+  * Slowest receives 1 point
+  * Fastest receives 68 points
+  * Ratio doesn't count
+
+* Recommendation for a good general purpose codec
+
+
+Aggregated Results - bottom 10
+------------------------------
+
+.. code-block::
+
+    (623, 'tables_zlib_7')
+    (642, 'npz_1')
+    (645, 'tables_zlib_9')
+    (687, 'tables_zlib_5')
+    (968, 'tables_blosc_zlib_9')
+    (970, 'zfile_9')
+    (989, 'tables_blosc_zlib_7')
+    (1040, 'zfile_7')
+    (1059, 'tables_blosc_zlib_5')
+    (1143, 'zfile_3')
+
+* As expected
+
+Aggregated Results - top 10
+---------------------------
+
+.. code-block::
+
+    (4994, 'bloscpack_snappy_5')
+    (5047, 'bloscpack_blosclz_3')
+    (5138, 'bloscpack_snappy_7')
+    (5252, 'bloscpack_blosclz_7')
+    (5292, 'bloscpack_lz4_9')
+    (5342, 'bloscpack_lz4_3')
+    (5358, 'bloscpack_blosclz_5')
+    (5363, 'bloscpack_lz4_1')
+    (5469, 'bloscpack_lz4_7')
+    (5508, 'bloscpack_lz4_5')
+
+* ``bloscpack_blosclz_7`` is the current default
 
 Relationship to (Distributed) Analytics Engines
 -----------------------------------------------
