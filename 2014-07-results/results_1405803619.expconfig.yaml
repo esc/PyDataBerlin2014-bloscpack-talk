@@ -1,0 +1,53 @@
+codec_levels:
+  bloscpack_blosclz: '[1, 3, 5, 7, 9]'
+  bloscpack_lz4: '[1, 3, 5, 7, 9]'
+  bloscpack_lz4hc: '[1, 3, 5, 7, 9]'
+  bloscpack_snappy: '[1, 3, 5, 7, 9]'
+  bloscpack_zlib: '[1, 3, 5, 7, 9]'
+  npy: '[0]'
+  npz: '[1]'
+  tables: '[0]'
+  tables_blosc_blosclz: '[1, 3, 5, 7, 9]'
+  tables_blosc_lz4: '[1, 3, 5, 7, 9]'
+  tables_blosc_lz4hc: '[1, 3, 5, 7, 9]'
+  tables_blosc_snappy: '[1, 3, 5, 7, 9]'
+  tables_blosc_zlib: '[1, 3, 5, 7, 9]'
+  tables_lzo: '[1, 3, 5, 7, 9]'
+  tables_zlib: '[1, 3, 5, 7, 9]'
+  zfile: '[1, 3, 5, 7, 9]'
+codecs:
+- bloscpack_blosclz
+- bloscpack_lz4
+- bloscpack_lz4hc
+- bloscpack_snappy
+- bloscpack_zlib
+- tables_blosc_blosclz
+- tables_blosc_lz4
+- tables_blosc_lz4hc
+- tables_blosc_snappy
+- tables_blosc_zlib
+- tables_lzo
+- tables_zlib
+- tables
+- npz
+- npy
+- zfile
+complexity_types:
+- arange
+- linspace
+- poisson
+- neuronal
+- bitcoin
+dataset_sizes:
+  large: 'Size: 100.0M (104857600B)'
+  mid: 'Size: 10.0M (10485760B)'
+  small: 'Size: 1.0M (1048576B)'
+number_repeats:
+  large: '[3, 1]'
+  mid: '[3, 3]'
+  small: '[5, 5]'
+  xlarge: '[1, 1]'
+storage_types:
+  ephemeral: /media/ephemeral0/bench
+  esb: /tmp/bench
+total datums: 2040

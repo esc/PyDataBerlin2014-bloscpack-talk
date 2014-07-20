@@ -1,0 +1,20 @@
+date: Sat Jul 19 21:00:19 UTC 2014
+hashes:
+  benchmark: 9ac2f5e78508a491da73326f450105a497607359
+  blosc: NA
+  bloscpack: cb355c77c5c316f15cd69a5c522d480c4cb42747
+  joblib: NA
+  numpy: 7a2b14ae0adb762a3eb8991595b14f74f004f435
+  tables: e2c5caa010d9debd5c0402c20703f3aee9828ab9
+hostname: ip-172-31-14-202
+uname: 'Linux ip-172-31-14-202 3.10.42-52.145.amzn1.x86_64 #1 SMP Tue Jun 10 23:46:43
+  UTC 2014 x86_64 x86_64 x86_64 GNU/Linux'
+versions:
+  blosc: 1.2.4
+  bloscpack: 0.8.0-dev
+  conda: conda 3.5.2
+  joblib: 0.8.2
+  numpy: 1.9.0.dev-7a2b14a
+  python: 'Python 3.4.1 :: Anaconda 2.0.1 (64-bit)'
+  tables: 3.1.2dev
+whoami: root
