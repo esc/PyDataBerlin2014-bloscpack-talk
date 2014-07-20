@@ -13,7 +13,7 @@ Blosc: A Fast Meta-Codec
 * Multithreaded
 * Multi-codec
 
-.. image:: blosc.pdf
+.. image:: images/blosc.pdf
 
 Shuffle Filter
 --------------
@@ -21,7 +21,7 @@ Shuffle Filter
 * Reorder bytes by significance inside a block
 * Potentially reduce Lempel-Ziv complexity of the data
 
-.. image:: shuffle.pdf
+.. image:: images/shuffle.pdf
 
 Multi-Codec
 -----------
@@ -58,7 +58,7 @@ Features
 * Checksums
 * Offsets, including pre-allocation for append
 
-.. image:: bloscpack.pdf
+.. image:: images/bloscpack.pdf
 
 Use Cases
 ---------
