@@ -306,11 +306,11 @@ Remaining Experimental Parameters
   * EBS
   * Ephemeral
 
+Results
+-------
 
-Dataset available
------------------
-
-pass
+Let's look at the ``arange`` and ``neuronal`` datasets in the ``small`` and
+``large`` configuration on ``ebs`` --> IPython notebooks
 
 Aggregated Results
 ------------------
