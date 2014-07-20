@@ -362,6 +362,15 @@ Aggregated Results - top 10
 
 * ``bloscpack_blosclz_7`` is the current default
 
+Reproducibility
+---------------
+
+* Results contaied in the talk repo
+* Lists almost all the hashes and configurations
+* All code open source
+* All datasets additionally available from backup location on own infrastructure
+* AMI available incl. instructions (soon to come)
+
 Relationship to (Distributed) Analytics Engines
 -----------------------------------------------
 
