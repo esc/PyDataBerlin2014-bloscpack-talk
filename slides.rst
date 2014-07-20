@@ -97,68 +97,68 @@ API
     def unpack(source, sink):
         pass
 
-``PlainSource``
----------------
-
-* Supply plain chunks (e.g. bytes or pointers(ints)) and a method to compress them
-
-.. code-block:: python
-
-    class PlainSource(object):
-
-        def compress_func(self):
-            pass
-
-        def __iter__(self):
-            pass
-
-``CompressedSource``
---------------------
-
-* Supply compressed chunks
-
-.. code-block:: python
-
-    class CompressedSource(object):
-
-        def __iter__(self):
-            pass
-
-``PlainSink``
--------------
-
-* Accept plain (decompressed) chunks
-
-.. code-block:: python
-
-    class PlainSink(object):
-
-        def put(self, chunk):
-            pass
-
-``CompressedSink``
-------------------
-
-* Accept compressed chunks, amongst other things
-
-.. code-block:: python
-
-    class CompressedSink(object):
-
-        def write_bloscpack_header(self):
-            pass
-
-        def write_metadata(self, metadata, metadata_args):
-            pass
-
-        def init_offsets(self):
-            pass
-
-        def finalize(self):
-            pass
-
-        def put(self, i, compressed):
-            pass
+.. ``PlainSource``
+.. ---------------
+.. 
+.. * Supply plain chunks (e.g. bytes or pointers(ints)) and a method to compress them
+.. 
+.. .. code-block:: python
+.. 
+..     class PlainSource(object):
+.. 
+..         def compress_func(self):
+..             pass
+.. 
+..         def __iter__(self):
+..             pass
+.. 
+.. ``CompressedSource``
+.. --------------------
+.. 
+.. * Supply compressed chunks
+.. 
+.. .. code-block:: python
+.. 
+..     class CompressedSource(object):
+.. 
+..         def __iter__(self):
+..             pass
+.. 
+.. ``PlainSink``
+.. -------------
+.. 
+.. * Accept plain (decompressed) chunks
+.. 
+.. .. code-block:: python
+.. 
+..     class PlainSink(object):
+.. 
+..         def put(self, chunk):
+..             pass
+.. 
+.. ``CompressedSink``
+.. ------------------
+.. 
+.. * Accept compressed chunks, amongst other things
+.. 
+.. .. code-block:: python
+.. 
+..     class CompressedSink(object):
+.. 
+..         def write_bloscpack_header(self):
+..             pass
+.. 
+..         def write_metadata(self, metadata, metadata_args):
+..             pass
+.. 
+..         def init_offsets(self):
+..             pass
+.. 
+..         def finalize(self):
+..             pass
+.. 
+..         def put(self, i, compressed):
+..             pass
 
 Numpy Example
 -------------
@@ -187,19 +187,19 @@ Extension Example
 * Implement CompressedS3Sink and CompressedS3Source
 * (These know nothing about Numpy)
 
-Somthing along the lines of...
-------------------------------
-
-.. code-block:: python
-
-   source = bp.PlainNumpySource(a)
-   sink = bp.CompressedS3Sink(bucket)
-   chunk_size = '20M'
-   nchunks, chunk_size, last_chunk_size = \
-       bp.calculate_nchunks(source.size, chunk_size)
-   bp.pack(source, sink,
-           nchunks, chunk_size, last_chunk_size,
-           metadata=source.metadata)
+.. Somthing along the lines of...
+.. ------------------------------
+.. 
+.. .. code-block:: python
+.. 
+..    source = bp.PlainNumpySource(a)
+..    sink = bp.CompressedS3Sink(bucket)
+..    chunk_size = '20M'
+..    nchunks, chunk_size, last_chunk_size = \
+..        bp.calculate_nchunks(source.size, chunk_size)
+..    bp.pack(source, sink,
+..            nchunks, chunk_size, last_chunk_size,
+..            metadata=source.metadata)
 
 Benchmarks
 ==========
