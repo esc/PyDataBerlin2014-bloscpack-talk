@@ -227,8 +227,8 @@ Background
 * Those used a laptop with SSD and SD storage
 * Showed that Bloscpack can be outperform contenders
 
-See also: Bloscpack: a compressed lightweight serialization format for
-numerical data `ARVIX <http://arxiv.org/abs/1404.6383>`_
+See also: `Bloscpack: a compressed lightweight serialization format for
+numerical data <http://arxiv.org/abs/1404.6383>`_
 
 Experimental Setup
 ------------------
