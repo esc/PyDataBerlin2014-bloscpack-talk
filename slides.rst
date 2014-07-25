@@ -182,15 +182,18 @@ Numpy Example
 
    a = np.arange(1e7)
 
-   # use defaults
+   # pack with defaults
    bp.pack_ndarray_file(a, 'a.blp')
 
-   # use custom settings
+   # pack with custom settings
    bp.pack_ndarray_file(a, 'a.blp',
        chunk_size='20M',
        blosc_args=bp.BloscArgs(cname='lz4', clevel=9),
        bloscpack_args=bp.BloscpackArgs(offsets=False),
        )
+
+   # unpack
+   b = bp.unpack_ndarray('a.blp')
 
 Extension Example
 -----------------
@@ -198,6 +201,7 @@ Extension Example
 * Idea: how about S3 connectivity?
 * Implement CompressedS3Sink and CompressedS3Source
 * (These know nothing about Numpy)
+* Result: ability to compress a Numpy array to an S3 bucket
 
 .. Somthing along the lines of...
 .. ------------------------------
