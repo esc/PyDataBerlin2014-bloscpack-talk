@@ -82,12 +82,12 @@ Existing Users
 API
 ---
 
+* Inner loop compress/decompress implemented
 * Concept: sinks and sources
 
   * ``PlainSource`` --> ``CompressedSink``
   * ``CompressedSource`` --> ``PlainSink``
 
-* Inner loop compress/decompress implemented
 * Supply appropriate source and sink
 * Sources and sinks must obey an interface/contract
 * Get easy Anything -> Anything
