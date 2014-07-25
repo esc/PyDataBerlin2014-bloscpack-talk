@@ -388,6 +388,29 @@ Aggregated Results - top 10
 
 * ``bloscpack_blosclz_7`` is the current default
 
+Conclusions -- What did I observe
+---------------------------------
+
+* Bloscpack vs. plain
+
+  * In general it will not hurt to try Bloscpack
+
+* Bloscpack vs. NPZ/ZFile
+
+  * These formats don't scale well to large arrays
+
+* Bloscpack vs. PyTables
+
+  * Bloscpack is somewhat better at fast serialization
+  * PyTables isn't the worst choice for long-term storage -- but do use Blosc
+
+* Blosclz vs. LZ4 vs. LZ4HC vs. Snappy vs. Zlib
+
+  * Blosclz and LZ4 are the kings of fast compression
+  * Snappy seems pretty average
+  * Zlib can really benefit from Blosc acceleration and shuffle
+
+
 Reproducibility
 ---------------
 
