@@ -301,7 +301,7 @@ ZFile Flaw
 ----------
 
 * Does not support arrays larger than 2GB
-* An ``int32`` is used somewhere for the size
+* An ``int32`` is used somewhere for the size in the ``zlib`` module
 
 Remaining Experimental Parameters
 ---------------------------------
@@ -322,6 +322,15 @@ Remaining Experimental Parameters
 
   * EBS
   * Ephemeral
+
+
+Measurements
+------------
+
+* Writing to disk is tricky
+* Measure with hot and cold FS cache
+* Add disk ``sync`` to the timing
+* Used a variant to the ``timeit`` utility.
 
 Results
 -------
