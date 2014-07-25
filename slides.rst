@@ -34,7 +34,7 @@ Multi-Codec
   * **Snappy**
   * **Zlib**
 
-python-blosc: bindings
+python-blosc: Bindings
 ----------------------
 
 * Python C-API bindings
@@ -388,8 +388,8 @@ Aggregated Results - top 10
 
 * ``bloscpack_blosclz_7`` is the current default
 
-Conclusions -- What did I observe
----------------------------------
+Conclusions -- What did I Observe?
+----------------------------------
 
 * Bloscpack vs. plain
 
@@ -434,6 +434,7 @@ Relationship to (Distributed) Analytics Engines
 * Reduced storage requirements
 * But: need to chose the *right codec™*
 * A Bloscpack file translates directly to a serialized column
+
 
 TODO
 ----
