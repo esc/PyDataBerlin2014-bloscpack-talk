@@ -77,7 +77,7 @@ Existing Users
   * chunked, compressed, columnar container (4C)
   * Uses Bloscpack for serialization and out-of-core computations
 
-* Recent EuroPython presentation: https://www.youtube.com/watch?v=-lKV4zC1gss
+* Checkout the recent EuroPython presentation by Francesc Alted
 
 API
 ---
@@ -185,12 +185,22 @@ Numpy Example
    # pack with defaults
    bp.pack_ndarray_file(a, 'a.blp')
 
+Numpy Example
+-------------
+
+.. code-block:: python
+
    # pack with custom settings
    bp.pack_ndarray_file(a, 'a.blp',
        chunk_size='20M',
        blosc_args=bp.BloscArgs(cname='lz4', clevel=9),
        bloscpack_args=bp.BloscpackArgs(offsets=False),
        )
+
+Numpy Example
+-------------
+
+.. code-block:: python
 
    # unpack
    b = bp.unpack_ndarray('a.blp')
