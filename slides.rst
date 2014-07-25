@@ -49,14 +49,15 @@ Bloscpack
 * Simple serialization format based on Blosc
 * Command line interface
 * Python API with support for Numpy arrays
+* Aimed at developers / power-users
 
 Features
 --------
 
-* Chunked compressed format (no 2GB limit)
-* Metadata
-* Checksums
-* Offsets, including pre-allocation for append
+* Chunked, compressed format
+* Metadata (optional)
+* Checksums (optional)
+* Offsets, including pre-allocation for append (optional)
 
 .. image:: images/bloscpack.pdf
 
@@ -65,6 +66,18 @@ Use Cases
 
 * Fast serialization
 * Streaming
+* On disk columnar storage
+* Substrate on which to build high-level abstractions
+
+Existing Users
+--------------
+
+* `bcolz <https://github.com/Blosc/bcolz>`_
+
+  * chunked, compressed, columnar container (4C)
+  * Uses Bloscpack for serialization and out-of-core computations
+
+* Recent EuroPython presentation: https://www.youtube.com/watch?v=-lKV4zC1gss
 
 API
 ---
@@ -74,12 +87,11 @@ API
   * ``PlainSource`` --> ``CompressedSink``
   * ``CompressedSource`` --> ``PlainSink``
 
-* Inner loop compress/decompres implemented
+* Inner loop compress/decompress implemented
 * Supply appropriate source and sink
-* Get easy N -> N
-* E.g. Numpy -> {string, file, memory}
-* Sources and Sinks can be generators
-* Abstract classes with some convenience provided
+* Sources and sinks must obey an interface/contract
+* Get easy Anything -> Anything
+* E.g. Numpy -> {string, file, memory, network}
 
 ``pack`` and ``unpack``
 -----------------------
@@ -211,7 +223,8 @@ Background
 * Those used a laptop with SSD and SD storage
 * Showed that Bloscpack can be outperform contenders
 
-See also: `Bloscpack: a compressed lightweight serialization format for numerical data <http://arxiv.org/abs/1404.6383>`_
+See also: Bloscpack: a compressed lightweight serialization format for
+numerical data `ARVIX <http://arxiv.org/abs/1404.6383>`_
 
 Experimental Setup
 ------------------
@@ -365,11 +378,11 @@ Aggregated Results - top 10
 Reproducibility
 ---------------
 
-* Results contaied in the talk repo
+* Results contained in the talk sources repository
 * Lists almost all the hashes and configurations
 * All code open source
 * All datasets additionally available from backup location on own infrastructure
-* AMI available incl. instructions (soon to come)
+* AMI available incl. instructions (soon to come / ask me)
 
 Relationship to (Distributed) Analytics Engines
 -----------------------------------------------
@@ -384,7 +397,7 @@ Relationship to (Distributed) Analytics Engines
 * Fast, partial loading from disk or network
 * Reduced storage requirements
 * But: need to chose the *right codec™*
-* A Bloscpack file could translate directly to a serialized column
+* A Bloscpack file translates directly to a serialized column
 
 TODO
 ----
