@@ -208,7 +208,9 @@ Numpy Example
 Commandline Example
 -------------------
 
-* TODO
+.. code-block:: console
+
+   $ blpk compress --level 9 --codec lz4 --no-offsets data.dat
 
 Extension Example
 -----------------
