@@ -466,14 +466,11 @@ TODO
 Getting In Touch
 ----------------
 
-* Main website: http://blosc.org
-* Github organization: http://github.com/Blosc
-* Bloscpack: http://github.com/Blosc/bloscpack
-* Google group: https://groups.google.com/forum/#!forum/blosc
-* This talk: https://github.com/esc/PyDataBerlin2014-bloscpack
-* Slides: http://slides.zetatech.org/haenel-pydataberlin14-bloscpack-talk
-
 .. raw:: latex
+
+   \begin{center}
+    \texttt{http://blosc.org}
+   \end{center}
 
    \vspace{1cm}
 
