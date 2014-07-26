@@ -455,3 +455,23 @@ TODO
   * Mitigate 2GB issue
 
 * Release Python 3 support
+
+Getting In Touch
+----------------
+
+* Main website: http://blosc.org
+* Github organization: http://github.com/Blosc
+* Bloscpack: http://github.com/Blosc/bloscpack
+* Google group: https://groups.google.com/forum/#!forum/blosc
+* This talk: https://github.com/esc/PyDataBerlin2014-bloscpack
+* Slides: http://slides.zetatech.org/haenel-pydataberlin14-bloscpack-talk
+
+.. raw:: latex
+
+   \vspace{1cm}
+
+   \begin{center}
+    \texttt{$@esc\_\_\_$}
+   \end{center}
+
+
