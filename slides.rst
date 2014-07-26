@@ -69,15 +69,15 @@ Use Cases
 * On disk columnar storage
 * Substrate on which to build high-level abstractions
 
-Existing Users
---------------
-
-* `bcolz <https://github.com/Blosc/bcolz>`_
-
-  * chunked, compressed, columnar container (4C)
-  * Uses Bloscpack for serialization and out-of-core computations
-
-* Checkout the recent EuroPython and PyData presentations by Francesc Alted
+.. Existing Users
+.. --------------
+.. 
+.. * `bcolz <https://github.com/Blosc/bcolz>`_
+.. 
+..   * chunked, compressed, columnar container (4C)
+..   * Uses Bloscpack for serialization and out-of-core computations
+.. 
+.. * Checkout the recent EuroPython and PyData presentations by Francesc Alted
 
 Python API
 ----------
