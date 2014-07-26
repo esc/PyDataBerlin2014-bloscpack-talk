@@ -378,7 +378,7 @@ Aggregated Results
 * Award points to a codec/level combination
 
   * Slowest receives 1 point
-  * Fastest receives 68 points
+  * Fastest receives max points
   * Ratio doesn't count
 
 * Recommendation for a good general purpose codec
