@@ -77,10 +77,10 @@ Existing Users
   * chunked, compressed, columnar container (4C)
   * Uses Bloscpack for serialization and out-of-core computations
 
-* Checkout the recent EuroPython presentation by Francesc Alted
+* Checkout the recent EuroPython and PyData presentations by Francesc Alted
 
-API
----
+Python API
+----------
 
 * Inner loop compress/decompress implemented
 * Concept: sinks and sources
@@ -204,6 +204,11 @@ Numpy Example
 
    # unpack
    b = bp.unpack_ndarray('a.blp')
+
+Commandline Example
+-------------------
+
+* TODO
 
 Extension Example
 -----------------
