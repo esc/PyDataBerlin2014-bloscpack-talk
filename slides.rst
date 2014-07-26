@@ -213,6 +213,21 @@ Extension Example
 * (These know nothing about Numpy)
 * Result: ability to compress a Numpy array to an S3 bucket
 
+Relationship to (Distributed) Analytics Engines
+-----------------------------------------------
+
+* Colum-oriented, compressed, chunked storage
+
+  * `bcolz <https://github.com/Blosc/bcolz>`_
+  * `Hustle <https://github.com/chango/hustle>`_
+  * `Parquet <http://parquet.io/>`_
+  * `RCFile / ORCFile <https://code.facebook.com/posts/229861827208629/scaling-the-facebook-data-warehouse-to-300-pb/?_fb_noscript=1>`_
+
+* Fast, partial loading from disk or network
+* Reduced storage requirements
+* But: need to chose the *right codec™*
+* A Bloscpack file translates directly to a serialized column
+
 .. Somthing along the lines of...
 .. ------------------------------
 .. 
@@ -430,25 +445,10 @@ Reproducibility
 * All datasets additionally available from backup location on own infrastructure
 * AMI available incl. instructions (soon to come / ask me)
 
-Relationship to (Distributed) Analytics Engines
------------------------------------------------
-
-* Colum-oriented, compressed, chunked storage
-
-  * `bcolz <https://github.com/Blosc/bcolz>`_
-  * `Hustle <https://github.com/chango/hustle>`_
-  * `Parquet <http://parquet.io/>`_
-  * `RCFile / ORCFile <https://code.facebook.com/posts/229861827208629/scaling-the-facebook-data-warehouse-to-300-pb/?_fb_noscript=1>`_
-
-* Fast, partial loading from disk or network
-* Reduced storage requirements
-* But: need to chose the *right codec™*
-* A Bloscpack file translates directly to a serialized column
-
-
 TODO
 ----
 
+* Stabilize the format
 * Support Bloscpack in Joblib
 
   * Speed gain
