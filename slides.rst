@@ -223,7 +223,7 @@ Extension Example
 Relationship to (Distributed) Analytics Engines
 -----------------------------------------------
 
-* Colum-oriented, compressed, chunked storage
+* Column-oriented, compressed, chunked storage
 
   * `bcolz <https://github.com/Blosc/bcolz>`_
   * `Hustle <https://github.com/chango/hustle>`_
@@ -423,12 +423,12 @@ TODO
 
 * Find other ways to analyse the results
 * Stabilize the format
+* Release Python 3 support
 * Support Bloscpack in Joblib
 
   * Speed gain
   * Mitigate 2GB issue
 
-* Release Python 3 support
 
 Getting In Touch
 ----------------
