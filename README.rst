@@ -10,6 +10,10 @@ The benchmarking script and analysis tools can be found on:
 
 https://github.com/Blosc/bloscpack-benchmarking
 
+The pre-compiled PDF can be found at:
+
+https://github.com/esc/PyDataBerlin2014-bloscpack-talk/blob/master/haenel-bloscpack-talk-2014-PyDataBerlin.pdf
+
 Dependencies
 ------------
 
